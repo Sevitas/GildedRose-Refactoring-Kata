@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp.Updaters
 {
-    public class AgedBrieUpdater : ItemUpdater
+    public class AgedBrieItemUpdater : ItemUpdater
     {
         public override void UpdateItem(Item item)
         {
