@@ -14,6 +14,9 @@ namespace csharp
             if (item.Name.Contains("Aged Brie"))
                 return new AgedBrieItemUpdater();
 
+            if (item.Name.Contains("Sulfuras"))
+                return new LegendaryItemUpdater();
+
             return new BasicItemUpdater();
         }
     }
