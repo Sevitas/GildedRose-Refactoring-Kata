@@ -15,11 +15,8 @@ namespace csharp
         {
             foreach (var item in Items)
             {
-                if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
-                {
-                    ItemUpdater itemUpdater = ItemCategory.Categorize(item);
-                    itemUpdater.UpdateItem(item);
-                }
+                ItemUpdater itemUpdater = ItemCategory.Categorize(item);
+                itemUpdater.UpdateItem(item);
                 
                 if (item.Quality < 50 &&
                     item.Name == "Backstage passes to a TAFKAL80ETC concert")

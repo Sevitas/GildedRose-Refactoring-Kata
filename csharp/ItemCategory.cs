@@ -17,6 +17,11 @@ namespace csharp
             if (item.Name.Contains("Sulfuras"))
                 return new LegendaryItemUpdater();
 
+            if (item.Name.Contains("Backstage passes"))
+            {
+                return new ConcertItemUpdater();
+            }
+
             return new BasicItemUpdater();
         }
     }
