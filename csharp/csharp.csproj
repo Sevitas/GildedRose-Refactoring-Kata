@@ -68,6 +68,7 @@
     <Compile Include="ItemCategory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Updaters\AgedBrieUpdater.cs" />
     <Compile Include="Updaters\BasicItemUpdater.cs" />
     <Compile Include="Updaters\ItemUpdater.cs" />
   </ItemGroup>

@@ -82,6 +82,7 @@ namespace csharp
         [Test]
         [TestCase(19, 5, 20, 4)]
         [TestCase(19, 2, 20, 1)]
+        [TestCase(19, 1, 20, 0)]
         public void UpdateQuality_AgedBrieQualityIncrease_Test(int quality, int sellIn, int expectedQuality, int expectedSellIn)
         {
             IList<Item> Items = new List<Item>
@@ -92,8 +93,7 @@ namespace csharp
             assertValues(expectedQuality, expectedSellIn, Items);
         }
 
-        [Test]
-        [TestCase(19, 1, 20, 0)]
+        [Test]        
         [TestCase(19, 0, 21, -1)]
         [TestCase(19, -1, 21, -2)]
         public void UpdateQuality_AgedBrieQualityIncrease_PassedSellInn_Test(int quality, int sellIn, int expectedQuality, int expectedSellIn)
