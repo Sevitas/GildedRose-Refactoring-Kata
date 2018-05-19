@@ -14,8 +14,8 @@ namespace csharp.Updaters
         public override void UpdateItem(Item item)
         {            
             DecrementSellIn(item);
-
-            for (int i = 0; i < numberOfQualityDecrease(item); i++)
+            int number = numberOfQualityDecrease(item);
+            for (int i = 0; i < number; i++)
             {
                 DecrementQuality(item);
             }

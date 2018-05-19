@@ -289,7 +289,7 @@ namespace csharp
             {
                 new Item
                 {
-                    Name = "Sulfuras, Hand of Ragnaros",
+                    Name = "Conjured Mana Cake",
                     SellIn = sellIn,
                     Quality = quality
                 }
@@ -308,7 +308,7 @@ namespace csharp
             {
                 new Item
                 {
-                    Name = "Sulfuras, Hand of Ragnaros",
+                    Name = "Conjured Mana Cake",
                     SellIn = sellIn,
                     Quality = quality
                 }
@@ -328,7 +328,7 @@ namespace csharp
             {
                 new Item
                 {
-                    Name = "Sulfuras, Hand of Ragnaros",
+                    Name = "Conjured Mana Cake",
                     SellIn = sellIn,
                     Quality = quality
                 }
@@ -346,7 +346,7 @@ namespace csharp
             {
                 new Item
                 {
-                    Name = "Sulfuras, Hand of Ragnaros",
+                    Name = "Conjured Mana Cake",
                     SellIn = sellIn,
                     Quality = quality
                 }
