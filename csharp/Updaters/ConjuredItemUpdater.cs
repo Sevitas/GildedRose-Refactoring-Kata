@@ -12,20 +12,21 @@ namespace csharp.Updaters
         private const int passedSellInDecreaseValue = 4;
 
         public override void UpdateItem(Item item)
-        {            
-            DecrementSellIn(item);
+        {                        
             int number = numberOfQualityDecrease(item);
             for (int i = 0; i < number; i++)
             {
                 DecrementQuality(item);
             }
+
+            DecrementSellIn(item);
         }
 
         private int numberOfQualityDecrease(Item item)
         {
-            return item.SellIn > PassedSellInValue
-                ? Math.Min(item.Quality, normalDecreaseValue)
-                : Math.Min(item.Quality, passedSellInDecreaseValue);
+            return PassedSellInValue(item)
+                ? passedSellInDecreaseValue
+                : normalDecreaseValue;
         }
     }
 }

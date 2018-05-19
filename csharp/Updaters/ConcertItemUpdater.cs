@@ -10,6 +10,7 @@ namespace csharp.Updaters
     {
         private const int tenDaysToConcert = 10;
         private const int fiveDaysToConcert = 5;
+        private const int zeroQuality = 0;
 
         public override void UpdateItem(Item item)
         {
@@ -23,8 +24,13 @@ namespace csharp.Updaters
 
             DecrementSellIn(item);
 
-            if (item.SellIn < PassedSellInValue)
-                item.Quality = MinQuality;
+            if (PassedSellInValue(item))
+                item.Quality = zeroQuality;
+        }
+
+        protected override Boolean PassedSellInValue(Item item)
+        {
+            return item.SellIn < PassedSellInValueConst;
         }
     }
 }

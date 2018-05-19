@@ -12,7 +12,7 @@ namespace csharp.Updaters
         {
             IncrementQuality(item);
 
-            if (item.SellIn <= PassedSellInValue)
+            if (PassedSellInValue(item))
                 IncrementQuality(item);
 
             DecrementSellIn(item);

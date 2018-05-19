@@ -283,6 +283,10 @@ namespace csharp
         [Test]
         [TestCase(20, 10, 18, 9)]
         [TestCase(20, 2, 18, 1)]
+        [TestCase(20, 1, 18, 0)]
+        [TestCase(4, 1, 2, 0)]
+        [TestCase(3, 1, 1, 0)]
+        [TestCase(2, 1, 0, 0)]
         public void UpdateQuality_ConjuredQualityDecrease_Test(int quality, int sellIn, int expectedQuality, int expectedSellIn)
         {
             IList<Item> Items = new List<Item>
@@ -298,8 +302,7 @@ namespace csharp
             assertValues(expectedQuality, expectedSellIn, Items);
         }
 
-        [Test]
-        [TestCase(20, 1, 16, 0)]
+        [Test]        
         [TestCase(20, 0, 16, -1)]
         [TestCase(20, -1, 16, -2)]
         public void UpdateQuality_ConjuredQualityDecrease_PassedSellIn_Test(int quality, int sellIn, int expectedQuality, int expectedSellIn)
@@ -318,8 +321,6 @@ namespace csharp
         }
 
         [Test]
-        [TestCase(4, 1, 0, 0)]
-        [TestCase(3, 1, 0, 0)]
         [TestCase(2, 0, 0, -1)]
         [TestCase(1, -1, 0, -2)]
         public void UpdateQuality_ConjuredQualityDecrease_MinQuality_PassedSellIn_Test(int quality, int sellIn, int expectedQuality, int expectedSellIn)

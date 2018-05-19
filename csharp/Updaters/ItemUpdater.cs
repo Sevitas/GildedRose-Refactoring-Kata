@@ -8,21 +8,21 @@ namespace csharp.Updaters
 {
     public abstract class ItemUpdater
     {
-        protected const int MaxQuality = 50;
-        protected const int MinQuality = 0;
-        protected const int PassedSellInValue = 0;
+        private const int maxQuality = 50;
+        private const int minQuality = 0;
+        protected const int PassedSellInValueConst = 0;
 
         public virtual void UpdateItem(Item item) { }
 
         protected void IncrementQuality(Item item)
         {
-            if (MaxQuality > item.Quality)
+            if (maxQuality > item.Quality)
                 item.Quality++;
         }
 
         protected void DecrementQuality(Item item)
         {
-            if (MinQuality < item.Quality)
+            if (minQuality < item.Quality)
                 item.Quality--;
         }
 
@@ -30,5 +30,10 @@ namespace csharp.Updaters
         {
             item.SellIn--;
         }
+
+        protected virtual Boolean PassedSellInValue(Item item)
+        {
+            return item.SellIn <= PassedSellInValueConst;
+        }        
     }
 }
