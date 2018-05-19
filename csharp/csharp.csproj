@@ -71,6 +71,7 @@
     <Compile Include="Updaters\AgedBrieItemUpdater.cs" />
     <Compile Include="Updaters\BasicItemUpdater.cs" />
     <Compile Include="Updaters\ConcertItemUpdater.cs" />
+    <Compile Include="Updaters\ConjuredItemUpdater.cs" />
     <Compile Include="Updaters\ItemUpdater.cs" />
     <Compile Include="Updaters\LegendaryItemUpdater.cs" />
   </ItemGroup>
