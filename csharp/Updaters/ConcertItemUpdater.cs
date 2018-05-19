@@ -20,6 +20,11 @@ namespace csharp.Updaters
 
             if (item.SellIn <= fiveDaysToConcert)
                 IncrementQuality(item);
+
+            DecrementSellIn(item);
+
+            if (item.SellIn < PassedSellInValue)
+                item.Quality = MinQuality;
         }
     }
 }
