@@ -12,7 +12,7 @@ namespace csharp
         public static ItemUpdater Categorize(Item item)
         {
             if (item.Name.Contains("Aged Brie"))
-                return new AgedBrieUpdater();
+                return new AgedBrieItemUpdater();
 
             return new BasicItemUpdater();
         }
