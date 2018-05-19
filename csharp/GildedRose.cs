@@ -13,45 +13,45 @@ namespace csharp
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items.Count; i++)
+            foreach (var item in Items)
             {
-                if (Items[i].Name == "+5 Dexterity Vest" || Items[i].Name == "Elixir of the Mongoose" ||
-                    Items[i].Name == "Aged Brie")
+                if (item.Name == "+5 Dexterity Vest" || item.Name == "Elixir of the Mongoose" ||
+                    item.Name == "Aged Brie")
                 {
-                    ItemUpdater itemUpdater = ItemCategory.Categorize(Items[i]);
-                    itemUpdater.UpdateItem(Items[i]);
+                    ItemUpdater itemUpdater = ItemCategory.Categorize(item);
+                    itemUpdater.UpdateItem(item);
                 }
 
                 
-                if (Items[i].Quality < 50 &&
-                    Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                if (item.Quality < 50 &&
+                    item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    Items[i].Quality = Items[i].Quality + 1;
+                    item.Quality = item.Quality + 1;
 
-                    if (Items[i].SellIn < 11)
+                    if (item.SellIn < 11)
                     {
-                        if (Items[i].Quality < 50)
+                        if (item.Quality < 50)
                         {
-                            Items[i].Quality = Items[i].Quality + 1;
+                            item.Quality = item.Quality + 1;
                         }
                     }
 
-                    if (Items[i].SellIn < 6)
+                    if (item.SellIn < 6)
                     {
-                        if (Items[i].Quality < 50)
+                        if (item.Quality < 50)
                         {
-                            Items[i].Quality = Items[i].Quality + 1;
+                            item.Quality = item.Quality + 1;
                         }
                     }
                 }
 
-                if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    Items[i].SellIn = Items[i].SellIn - 1;
+                    item.SellIn = item.SellIn - 1;
 
-                    if (Items[i].SellIn < 0)
+                    if (item.SellIn < 0)
                     {
-                        Items[i].Quality = Items[i].Quality - Items[i].Quality;
+                        item.Quality = item.Quality - item.Quality;
                     }
                 }
             }
