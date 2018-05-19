@@ -17,18 +17,6 @@ namespace csharp
             {
                 ItemUpdater itemUpdater = ItemCategory.Categorize(item);
                 itemUpdater.UpdateItem(item);
-                
-                if (item.Quality < 50 &&
-                    item.Name == "Backstage passes to a TAFKAL80ETC concert")
-                {                                       
-                    if (item.SellIn < 6)
-                    {
-                        if (item.Quality < 50)
-                        {
-                            item.Quality = item.Quality + 1;
-                        }
-                    }
-                }
 
                 if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
