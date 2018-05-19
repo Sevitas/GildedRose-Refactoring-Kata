@@ -22,6 +22,11 @@ namespace csharp
                 return new ConcertItemUpdater();
             }
 
+            if (item.Name.Contains("Conjured"))
+            {
+                return new ConjuredItemUpdater();
+            }
+
             return new BasicItemUpdater();
         }
     }
